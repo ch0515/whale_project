@@ -22,7 +22,7 @@ void drawTitle() {
     setColor(darkgray, black);
     printf("developed by ÀÌÇý·É ÃÖ°¡À» È²Ã¤¹Î");
 
-     x = 20;
+     x = 20; 
      y = 4;
     setColor(lightblue, black);
     gotoxy(x, y);
