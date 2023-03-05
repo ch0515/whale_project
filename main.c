@@ -1,4 +1,4 @@
-#include "main.h"
+ï»¿#include "main.h"
 
 int main(void) {
     while (1) {
@@ -20,7 +20,7 @@ void drawTitle() {
     system("cls");
 
     setColor(darkgray, black);
-    printf("developed by ÀÌÇý·É ÃÖ°¡À» È²Ã¤¹Î");
+    printf("developed by ì´í˜œë ¹ ìµœê°€ì„ í™©ì±„ë¯¼");
 
      x = 20; 
      y = 4;
@@ -40,27 +40,27 @@ void drawTitle() {
 
 
     setColor(white, black);
-    x = 32, y = 12;
+    x = 0, y = 12;
     gotoxy(x, y);
-    printf(" ---(.______)--||-------||----||------||-------||-----");
+    printf("                             O  ---(.______)--||-------||----||------||-------||-----");
     gotoxy(x, ++y);
-    printf("|                                                     |");
+    printf("                               |                                                     |  O");
     gotoxy(x, ++y);
-    printf("|     ÀÌ¹ø °ÔÀÓÀº ³»°¡ °í·¡ ¿´´Ù¸é ÀÔ´Ï´Ù.            |");
+    printf("                           ã€‚  |     ì´ë²ˆ ê²Œìž„ì€ ë‚´ê°€ ê³ ëž˜ ì˜€ë‹¤ë©´ ìž…ë‹ˆë‹¤.            |");
     gotoxy(x, ++y);
-    printf("|                                                     |");
+    printf("                   o           |                                                     | ï¼Š");
     gotoxy(x, ++y);
-    printf("|      °í·¡ ±×¸²ÀÌ ±×·ÁÁø ÂÊ¿¡ È­»ìÇ¥¸¦ ¸ØÃß¼¼¿ä.     |");
+    printf("                               |      ê³ ëž˜ ê·¸ë¦¼ì´ ê·¸ë ¤ì§„ ìª½ì— í™”ì‚´í‘œë¥¼ ë©ˆì¶”ì„¸ìš”.     |");
     gotoxy(x, ++y);
-    printf("| ÃÑ 3¹øÀÇ °í·¡ ±×¸²¿¡ È­»ìÇ¥¸¦ ¸ØÃß¸é °í·¡°¡ µË´Ï´Ù. |");
+    printf("                           ï¼Š  | ì´ 3ë²ˆì˜ ê³ ëž˜ ê·¸ë¦¼ì— í™”ì‚´í‘œë¥¼ ë©ˆì¶”ë©´ ê³ ëž˜ê°€ ë©ë‹ˆë‹¤. |");
     gotoxy(x, ++y);
-    printf("|                                                     |");
+    printf("                             o |                                                     |");
     gotoxy(x, ++y);
-    printf("|          ¿£ÅÍÅ°(ENTER)¸¦ ´­·¯ ½ÃÀÛÇÏ¼¼¿ä            |");
+    printf("                       ï¼Š      |          ì—”í„°í‚¤(ENTER)ë¥¼ ëˆŒëŸ¬ ì‹œìž‘í•˜ì„¸ìš”            |");
     gotoxy(x, ++y);
-    printf("|                                                     |");
+    printf("                               |                                                     |   o");
     gotoxy(x, ++y);
-    printf(" ---||-------||-------||----||------||----(______.)---");
+    printf("                                ---||-------||-------||----||------||----(______.)---");
 
 }
 
@@ -70,9 +70,9 @@ int menuDraw() {
     int key = y;
     int num = 1;
     gotoxy(x - 2, y);
-    printf("> ½ÃÀÛÇÏ±â\n");
+    printf("> ì‹œìž‘í•˜ê¸°\n");
     gotoxy(x, y + 1);
-    printf("Á¾·áÇÏ±â");
+    printf("ì¢…ë£Œí•˜ê¸°");
     while (1) {
         input = _getch();
         switch (input) {
