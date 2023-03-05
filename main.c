@@ -35,7 +35,7 @@ void drawTitle() {
     printf(" III  ff    III   WW WWW WW aa  aaa  sss  AAAAAAA  WW WWW WW hh   hh aa  aaa lll eeeee  ");
     gotoxy(x, ++y);
     printf("IIIII ff   IIIII   WW   WW   aaa aa     s AA   AA   WW   WW  hh   hh  aaa aa lll  eeeee ");
-    gotoxy(x, ++y);
+    gotoxy(x, ++y);  
     printf("                                     sss                                                ");
 
 
