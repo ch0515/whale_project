@@ -26,17 +26,17 @@ void drawTitle() {
      y = 4;
     setColor(lightblue, black);
     gotoxy(x, y);
-    printf("IIIII  fff IIIII WW      WW                 AAA   WW      WW hh              lll        ");
+    printf("           hh              lll                                              ");
     gotoxy(x, ++y);
-    printf(" III  ff    III  WW      WW   aa aa  sss   AAAAA  WW      WW hh        aa aa lll   eee  ");
+    printf("ww      ww hh        aa aa lll   eee      gggggg   aa aa mm mm mmmm    eee  ");
     gotoxy(x, ++y);
-    printf(" III  ffff  III  WW   W  WW  aa aaa s     AA   AA WW   W  WW hhhhhh   aa aaa lll ee   e ");
+    printf("ww      ww hhhhhh   aa aaa lll ee   e    gg   gg  aa aaa mmm  mm  mm ee   e ");
     gotoxy(x, ++y);
-    printf(" III  ff    III   WW WWW WW aa  aaa  sss  AAAAAAA  WW WWW WW hh   hh aa  aaa lll eeeee  ");
+    printf(" ww ww ww  hh   hh aa  aaa lll eeeee     ggggggg aa  aaa mmm  mm  mm eeeee  ");
     gotoxy(x, ++y);
-    printf("IIIII ff   IIIII   WW   WW   aaa aa     s AA   AA   WW   WW  hh   hh  aaa aa lll  eeeee ");
+    printf("  ww  ww   hh   hh  aaa aa lll  eeeee         gg  aaa aa mmm  mm  mm  eeeee ");
     gotoxy(x, ++y);  
-    printf("                                     sss                                                ");
+    printf("                                          ggggg                             ");
 
 
     setColor(white, black);
