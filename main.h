@@ -1,6 +1,7 @@
 #include <stdio.h>
 #include <windows.h>
 #include <stdlib.h>
+#include <time.h>
 
 #ifndef KEY_CODE
 #define KEY_CODE
@@ -52,7 +53,7 @@ enum {
 #endif
 
 void init() {
-	system("mode con cols=120 lines=30 | title If I Was A Whale");
+	system("mode con cols=120 lines=30 | title Whale game");
 
 	HANDLE consoleHandle = GetStdHandle(STD_OUTPUT_HANDLE); //콘솔 핸들 가져오기
 	CONSOLE_CURSOR_INFO ConsoleCursor;

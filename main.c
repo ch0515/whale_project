@@ -122,4 +122,12 @@ int keyControl() {
     return 0;
 }
 void gloop() {
+    int x = 15;
+    int y = 20;
+    //값 넣어주기
+    system("cls");
+    srand(time(NULL));
+    while (1) {
+        
+    }
 }
