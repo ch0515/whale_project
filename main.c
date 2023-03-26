@@ -20,9 +20,9 @@ void drawTitle() {
     system("cls");
 
     setColor(darkgray, black);
-    printf("developed by 이혜령 최가을 황채민");
+    printf("developed by 이혜령 황채민");
 
-     x = 20; 
+     x = 23; 
      y = 4;
     setColor(lightblue, black);
     gotoxy(x, y);
@@ -128,6 +128,8 @@ void gloop() {
     system("cls");
     srand(time(NULL));
     while (1) {
+        gotoxy(x, y);
+        printf("|");
         
     }
 }
