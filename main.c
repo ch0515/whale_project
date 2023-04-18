@@ -24,7 +24,7 @@ void drawTitle() {
 
      x = 23; 
      y = 4;
-    setColor(lightblue, black);
+    setColor(cyan, black);
     gotoxy(x, y);
     printf("           hh              lll                                              ");
     gotoxy(x, ++y);
@@ -127,59 +127,77 @@ void gloop() {
     int y = 7;
     //값 넣어주기
     system("cls");
-   // srand(time(NULL));
+    // srand(time(NULL));
 
     while (1) {
 
-        x = 3;
+        x = 15;
         y = 7;
-        setColor(cyan, yellow);
+        setColor(lightcyan, black);
         gotoxy(x, y);
-        printf("                 $$$$$$$$$       \n");
+        printf("            @@@@@@     \n");
         gotoxy(x, y++);
-        printf("              $$$$$$$$$$$$$$$    \n");
+        printf("         @@@@@@@@@@@@  \n");
         gotoxy(x, y++);
-        printf("    $$  $$   $$$$$$$$$$$$$$ $$   \n");
+        printf("        @@@@@@@@@@@@@@ \n");
         gotoxy(x, y++);
-        printf("     $$$$$   $$$$$$$$$$$$$$$$$   \n");
+        printf("@@ @@   @@@@@@@@@@@ @@\n");
         gotoxy(x, y++);
-        printf("      $$$$$$$$$$$$$$$$$$$$$$$$   \n");
+        printf(" @@@@@@@@@@@@@@@@@@@@@ \n");
         gotoxy(x, y++);
-        printf("       $$$$$$$$$$$$$$$$$$$$$$$   \n");
+        printf("  @@@@@@@@@@@@@@@@@@@@ \n");
 
         x = 40;
         y = 6;
         gotoxy(x, y++);
-        setColor(brown, white);
-        printf("           $$$$$$         \n");
+        setColor(brown, black);
+        printf("    $$$$      \n");
         gotoxy(x, y++);
-        printf("         $$$$$$$$$$       \n");
+        printf("  $$$$$$$$    \n");
         gotoxy(x, y++);
-        printf("         $$$$$$$$$$       \n");
+        printf("  $$$$$$$$    \n");
         gotoxy(x, y++);
-        printf("           $$$$$$         \n");
+        printf("    $$$$      \n");
         gotoxy(x, y++);
-        printf("        $$$$$$$$$$$$      \n");
+        printf("  $$$$$$$$   \n");
         gotoxy(x, y++);
-        printf("       $$$$$$$$$$$$$$     \n");
+        printf(" $$$$$$$$$$  \n");
         gotoxy(x, y++);
-        printf("      $$$$$$$$$$$$$$$$    \n");
+        printf("$$$$$$$$$$$$ \n");
 
-        x = 70;
+        x = 60;
         y = 7;
-        setColor(cyan, yellow);
+        setColor(lightcyan, black);
         gotoxy(x, y);
-        printf("                 $$$$$$$$$       \n");
+        printf("            ######       \n");
         gotoxy(x, y++);
-        printf("              $$$$$$$$$$$$$$$    \n");
+        printf("         ############    \n");
         gotoxy(x, y++);
-        printf("    $$  $$   $$$$$$$$$$$$$$ $$   \n");
+        printf("        ##############   \n");
         gotoxy(x, y++);
-        printf("     $$$$$   $$$$$$$$$$$$$$$$$   \n");
+        printf("## ##   ########### ##   \n");
         gotoxy(x, y++);
-        printf("      $$$$$$$$$$$$$$$$$$$$$$$$   \n");
+        printf(" #####################   \n");
         gotoxy(x, y++);
-        printf("       $$$$$$$$$$$$$$$$$$$$$$$   \n");
+        printf("  ####################   \n");
+
+        x = 90;
+        y = 7;
+        gotoxy(x, y++);
+        setColor(brown, black);
+        printf("    $$$$      \n");
+        gotoxy(x, y++);
+        printf("  $$$$$$$$    \n");
+        gotoxy(x, y++);
+        printf("  $$$$$$$$    \n");
+        gotoxy(x, y++);
+        printf("    $$$$      \n");
+        gotoxy(x, y++);
+        printf("  $$$$$$$$   \n");
+        gotoxy(x, y++);
+        printf(" $$$$$$$$$$  \n");
+        gotoxy(x, y++);
+        printf("$$$$$$$$$$$$ \n");
 
     }
 }
