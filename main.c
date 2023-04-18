@@ -122,7 +122,7 @@ int keyControl() {
     return 0;
 }
 void gloop() {
-    int heart = 3;
+    int life = 3;
     int x = 0;
     int y = 7;
     //값 넣어주기
@@ -132,7 +132,7 @@ void gloop() {
     while (1) {
 
         x = 15;
-        y = 7;
+        y = 8;
         setColor(lightcyan, black);
         gotoxy(x, y);
         printf("            @@@@@@     \n");
@@ -148,7 +148,7 @@ void gloop() {
         printf("  @@@@@@@@@@@@@@@@@@@@ \n");
 
         x = 40;
-        y = 6;
+        y = 8;
         gotoxy(x, y++);
         setColor(brown, black);
         printf("    $$$$      \n");
@@ -166,7 +166,7 @@ void gloop() {
         printf("$$$$$$$$$$$$ \n");
 
         x = 60;
-        y = 7;
+        y = 8;
         setColor(lightcyan, black);
         gotoxy(x, y);
         printf("            ######       \n");
@@ -182,7 +182,7 @@ void gloop() {
         printf("  ####################   \n");
 
         x = 90;
-        y = 7;
+        y = 8;
         gotoxy(x, y++);
         setColor(brown, black);
         printf("    $$$$      \n");
