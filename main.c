@@ -42,17 +42,17 @@ void drawTitle() {
     setColor(white, black);
     x = 0, y = 12;
     gotoxy(x, y);
-    printf("                             O  ---(.______)--||-------||----||------||-------||-----");
+    printf("             $$$$$$          O  ---(.______)--||-------||----||------||-------||-----");
     gotoxy(x, ++y);
-    printf("                               |                                                     |  O");
+    printf("          $$$$$$$$$$$$         |                                                     |  O");
     gotoxy(x, ++y);
-    printf("                           。  |     이번 게임은 내가 고래 였다면 입니다.            |");
+    printf("$$  $$   $$$$$$$$$$$$$$    。  |     이번 게임은 [내가 고래 였다면] 입니다.          |");
     gotoxy(x, ++y);
-    printf("                   o           |                                                     | ＊");
+    printf(" $$$$$   $$$$$$$$$$$$$$ o      |                                                     | ＊");
     gotoxy(x, ++y);
-    printf("                               |      고래 그림이 그려진 쪽에 화살표를 멈추세요.     |");
+    printf("  $$$$$$$$$$$$$$$$$$$$         |      고래 그림이 그려진 쪽에 화살표를 멈추세요.     |");
     gotoxy(x, ++y);
-    printf("                           ＊  | 총 3번의 고래 그림에 화살표를 멈추면 고래가 됩니다. |");
+    printf("   $$$$$$$$$$$$$$$$$$$     ＊  | 총 3번의 고래 그림에 화살표를 멈추면 고래가 됩니다. |");
     gotoxy(x, ++y);
     printf("                             o |                                                     |");
     gotoxy(x, ++y);
@@ -122,14 +122,64 @@ int keyControl() {
     return 0;
 }
 void gloop() {
-    int x = 15;
-    int y = 20;
+    int heart = 3;
+    int x = 0;
+    int y = 7;
     //값 넣어주기
     system("cls");
-    srand(time(NULL));
+   // srand(time(NULL));
+
     while (1) {
+
+        x = 3;
+        y = 7;
+        setColor(cyan, yellow);
         gotoxy(x, y);
-        printf("|");
-        
+        printf("                 $$$$$$$$$       \n");
+        gotoxy(x, y++);
+        printf("              $$$$$$$$$$$$$$$    \n");
+        gotoxy(x, y++);
+        printf("    $$  $$   $$$$$$$$$$$$$$ $$   \n");
+        gotoxy(x, y++);
+        printf("     $$$$$   $$$$$$$$$$$$$$$$$   \n");
+        gotoxy(x, y++);
+        printf("      $$$$$$$$$$$$$$$$$$$$$$$$   \n");
+        gotoxy(x, y++);
+        printf("       $$$$$$$$$$$$$$$$$$$$$$$   \n");
+
+        x = 40;
+        y = 6;
+        gotoxy(x, y++);
+        setColor(brown, white);
+        printf("           $$$$$$         \n");
+        gotoxy(x, y++);
+        printf("         $$$$$$$$$$       \n");
+        gotoxy(x, y++);
+        printf("         $$$$$$$$$$       \n");
+        gotoxy(x, y++);
+        printf("           $$$$$$         \n");
+        gotoxy(x, y++);
+        printf("        $$$$$$$$$$$$      \n");
+        gotoxy(x, y++);
+        printf("       $$$$$$$$$$$$$$     \n");
+        gotoxy(x, y++);
+        printf("      $$$$$$$$$$$$$$$$    \n");
+
+        x = 70;
+        y = 7;
+        setColor(cyan, yellow);
+        gotoxy(x, y);
+        printf("                 $$$$$$$$$       \n");
+        gotoxy(x, y++);
+        printf("              $$$$$$$$$$$$$$$    \n");
+        gotoxy(x, y++);
+        printf("    $$  $$   $$$$$$$$$$$$$$ $$   \n");
+        gotoxy(x, y++);
+        printf("     $$$$$   $$$$$$$$$$$$$$$$$   \n");
+        gotoxy(x, y++);
+        printf("      $$$$$$$$$$$$$$$$$$$$$$$$   \n");
+        gotoxy(x, y++);
+        printf("       $$$$$$$$$$$$$$$$$$$$$$$   \n");
+
     }
 }

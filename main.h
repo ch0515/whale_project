@@ -5,6 +5,7 @@
 
 #ifndef KEY_CODE
 #define KEY_CODE
+#define ONE_SECOND 10
 
 /*기본 함수*/
 
