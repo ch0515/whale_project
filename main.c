@@ -44,23 +44,23 @@ void drawTitle() {
     gotoxy(x, y);
     printf("             $$$$$$          O  ---(.______)--||-------||----||------||-------||-----");
     gotoxy(x, ++y);
-    printf("          $$$$$$$$$$$$         |                                                     |  O");
+    printf("          $$$$$$$$$$$         |                                                     |  O");
     gotoxy(x, ++y);
-    printf("$$  $$   $$$$$$$$$$$$$$    。  |     이번 게임은 [내가 고래 였다면] 입니다.          |");
+    printf("$$  $$   $$$$$$$$$$$$$    。  |     이번 게임은 [내가 고래 였다면] 입니다.          |");
     gotoxy(x, ++y);
-    printf(" $$$$$   $$$$$$$$$$$$$$ o      |                                                     | ＊");
+    printf(" $$$$$   $$$$$$$$$$$$$ o      |                                                     | ＊");
     gotoxy(x, ++y);
-    printf("  $$$$$$$$$$$$$$$$$$$$         |      고래 그림이 그려진 쪽에 화살표를 멈추세요.     |");
+    printf("  $$$$$$$$$$$$$$$$$$$$        |      고래 그림이 그려진 쪽에 화살표를 멈추세요.     |");
     gotoxy(x, ++y);
-    printf("   $$$$$$$$$$$$$$$$$$$     ＊  | 총 3번의 고래 그림에 화살표를 멈추면 고래가 됩니다. |");
+    printf("   $$$$$$$$$$$$$$$$$$$     ＊ | 총 3번의 고래 그림에 화살표를 멈추면 고래가 됩니다. |");
     gotoxy(x, ++y);
-    printf("                             o |                                                     |");
+    printf("                             o|                                                     |");
     gotoxy(x, ++y);
-    printf("                       ＊      |          엔터키(ENTER)를 눌러 시작하세요            |");
+    printf("                       ＊     |          엔터키(ENTER)를 눌러 시작하세요            |");
     gotoxy(x, ++y);
-    printf("                               |                                                     |   o");
+    printf("                              |                                                     |   o");
     gotoxy(x, ++y);
-    printf("                                ---||-------||-------||----||------||----(______.)---");
+    printf("                              ---||-------||-------||----||------||----(______.)---");
 
 }
 
@@ -135,35 +135,35 @@ void gloop() {
         y = 8;
         setColor(lightcyan, black);
         gotoxy(x, y);
-        printf("            @@@@@@     \n");
+        printf("            ######       \n");
         gotoxy(x, y++);
-        printf("         @@@@@@@@@@@@  \n");
+        printf("         ############    \n");
         gotoxy(x, y++);
-        printf("        @@@@@@@@@@@@@@ \n");
+        printf("        ##############   \n");
         gotoxy(x, y++);
-        printf("@@ @@   @@@@@@@@@@@ @@\n");
+        printf("## ##   ########### ##   \n");
         gotoxy(x, y++);
-        printf(" @@@@@@@@@@@@@@@@@@@@@ \n");
+        printf(" #####################   \n");
         gotoxy(x, y++);
-        printf("  @@@@@@@@@@@@@@@@@@@@ \n");
+        printf("  ####################   \n");
 
         x = 40;
         y = 8;
         gotoxy(x, y++);
         setColor(brown, black);
-        printf("    $$$$      \n");
+        printf("    ####      \n");
         gotoxy(x, y++);
-        printf("  $$$$$$$$    \n");
+        printf("  ########    \n");
         gotoxy(x, y++);
-        printf("  $$$$$$$$    \n");
+        printf("  ########    \n");
         gotoxy(x, y++);
-        printf("    $$$$      \n");
+        printf("    ####      \n");
         gotoxy(x, y++);
-        printf("  $$$$$$$$   \n");
+        printf("  ########   \n");
         gotoxy(x, y++);
-        printf(" $$$$$$$$$$  \n");
+        printf(" ##########  \n");
         gotoxy(x, y++);
-        printf("$$$$$$$$$$$$ \n");
+        printf("############ \n");
 
         x = 60;
         y = 8;
@@ -185,19 +185,19 @@ void gloop() {
         y = 8;
         gotoxy(x, y++);
         setColor(brown, black);
-        printf("    $$$$      \n");
+        printf("    ####      \n");
         gotoxy(x, y++);
-        printf("  $$$$$$$$    \n");
+        printf("  ########    \n");
         gotoxy(x, y++);
-        printf("  $$$$$$$$    \n");
+        printf("  ########    \n");
         gotoxy(x, y++);
-        printf("    $$$$      \n");
+        printf("    ####      \n");
         gotoxy(x, y++);
-        printf("  $$$$$$$$   \n");
+        printf("  ########   \n");
         gotoxy(x, y++);
-        printf(" $$$$$$$$$$  \n");
+        printf(" ##########  \n");
         gotoxy(x, y++);
-        printf("$$$$$$$$$$$$ \n");
+        printf("############ \n");
 
     }
 }
