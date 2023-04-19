@@ -106,12 +106,8 @@ int keyControl() {
     while (1) {
         input = _getch();
         switch (input) {
-        case LEFT: {
+        case SPACEBAR: {
             return 1;
-            break;
-        }
-        case RIGHT: {
-            return 2;
             break;
         }
         case ESC: {
@@ -125,6 +121,7 @@ void gloop() {
     int life = 3;
     int x = 0;
     int y = 7;
+    int a;
     //값 넣어주기
     system("cls");
     // srand(time(NULL));
@@ -150,7 +147,7 @@ void gloop() {
         x = 40;
         y = 8;
         gotoxy(x, y++);
-        setColor(brown, black);
+        setColor(darkgray, black);
         printf("    ####      \n");
         gotoxy(x, y++);
         printf("  ########    \n");
@@ -184,7 +181,7 @@ void gloop() {
         x = 90;
         y = 8;
         gotoxy(x, y++);
-        setColor(brown, black);
+        setColor(darkgray, black);
         printf("    ####      \n");
         gotoxy(x, y++);
         printf("  ########    \n");
@@ -198,6 +195,40 @@ void gloop() {
         printf(" ##########  \n");
         gotoxy(x, y++);
         printf("############ \n");
+
+        y = 20;
+        gotoxy(x, y);
+
+        while (1) {
+            for (int i = 10; i <= 110; i++) {
+                x = i;
+                gotoxy(x, y);
+                Sleep(ONE_SECOND);
+                printf("▲");
+                printf(" ");
+                
+                
+            }
+            a = keyControl();
+            if (a == 1) {
+                if (x == 15) {
+                    system("cls");
+                    printf("성공");
+                }
+                else {
+                    system("cls");
+                    printf("실패");
+                }
+            }
+            /*if (x == 110) {
+                for (int i = 110; i <= 10; i--) {
+                    x = i;
+                    gotoxy(x, y);
+                    Sleep(ONE_SECOND);
+                    printf("▲");
+                }
+            }*/
+        }
 
     }
 }
