@@ -36,10 +36,6 @@ enum {
 
 void init();
 void gotoxy(int x, int y);
-int menuDraw();
 void CursorView();
 void setBackColor(int forground, int background);
 void setColor(int color);
-int keyControl();
-void gameOver();
-void gameClear();
