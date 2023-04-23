@@ -1,3 +1,4 @@
+//modules.h
 #define _CRT_SECURE_NO_WARN
 #pragma once
 #include<stdio.h>
@@ -36,6 +37,10 @@ enum {
 
 void init();
 void gotoxy(int x, int y);
+int menuDraw();
 void CursorView();
 void setBackColor(int forground, int background);
 void setColor(int color);
+int keyControl();
+void gameOver();
+void gameClear();

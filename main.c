@@ -1,4 +1,5 @@
-﻿#include "main.h"
+﻿//main.c
+#include "main.h"
 #include "modules.h"
 
 int main(void) {
@@ -23,8 +24,8 @@ void drawTitle() {
     setColor(darkgray, black);
     printf("developed by 이혜령 황채민");
 
-     x = 23; 
-     y = 4;
+    x = 23;
+    y = 4;
     setColor(cyan, black);
     gotoxy(x, y);
     printf("           hh              lll                                              ");
@@ -36,7 +37,7 @@ void drawTitle() {
     printf(" ww ww ww  hh   hh aa  aaa lll eeeee     ggggggg aa  aaa mmm  mm  mm eeeee  ");
     gotoxy(x, ++y);
     printf("  ww  ww   hh   hh  aaa aa lll  eeeee         gg  aaa aa mmm  mm  mm  eeeee ");
-    gotoxy(x, ++y);  
+    gotoxy(x, ++y);
     printf("                                          ggggg                             ");
 
 
@@ -74,7 +75,7 @@ void gloop() {
     // srand(time(NULL));
     for (int i = 1; i <= 3; i++) {
         while (1) {
-            
+
             x = 15;
             y = 8;
             setColor(lightcyan, black);
@@ -183,8 +184,8 @@ void gloop() {
         }
         break;
     }
-    
-    
+
+
 }
 void gameOver()
 {

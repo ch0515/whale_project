@@ -1,3 +1,4 @@
+//main.h
 #pragma warning(disable:4996)
 #include <errno.h>
 
