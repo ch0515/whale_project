@@ -66,93 +66,96 @@ void drawTitle() {
 
 }
 void gloop() {
-    int life = 3;
+    int life = 0;
     int x = 0;
     int y = 7;
-    int a;
+    int a=0;
+    int Nos = 0;
+    int count = 3;
     //값 넣어주기
     system("cls");
     // srand(time(NULL));
-    for (int i = 1; i <= 3; i++) {
-        while (1) {
+    //for (int i = 1; i <= 3; i++) {
+    while (1) {
+        system("cls");
+        x = 15;
+        y = 8;
+        setColor(lightcyan, black);
+        gotoxy(x, y);
+        printf("            ######       \n");
+        gotoxy(x, y++);
+        printf("         ############    \n");
+        gotoxy(x, y++);
+        printf("        ##############   \n");
+        gotoxy(x, y++);
+        printf("## ##   ########### ##   \n");
+        gotoxy(x, y++);
+        printf(" #####################   \n");
+        gotoxy(x, y++);
+        printf("  ####################   \n");
 
-            x = 15;
-            y = 8;
-            setColor(lightcyan, black);
-            gotoxy(x, y);
-            printf("            ######       \n");
-            gotoxy(x, y++);
-            printf("         ############    \n");
-            gotoxy(x, y++);
-            printf("        ##############   \n");
-            gotoxy(x, y++);
-            printf("## ##   ########### ##   \n");
-            gotoxy(x, y++);
-            printf(" #####################   \n");
-            gotoxy(x, y++);
-            printf("  ####################   \n");
+        x = 40;
+        y = 8;
+        gotoxy(x, y++);
+        setColor(darkgray, black);
+        printf("    ####      \n");
+        gotoxy(x, y++);
+        printf("  ########    \n");
+        gotoxy(x, y++);
+        printf("  ########    \n");
+        gotoxy(x, y++);
+        printf("    ####      \n");
+        gotoxy(x, y++);
+        printf("  ########   \n");
+        gotoxy(x, y++);
+        printf(" ##########  \n");
+        gotoxy(x, y++);
+        printf("############ \n");
 
-            x = 40;
-            y = 8;
-            gotoxy(x, y++);
-            setColor(darkgray, black);
-            printf("    ####      \n");
-            gotoxy(x, y++);
-            printf("  ########    \n");
-            gotoxy(x, y++);
-            printf("  ########    \n");
-            gotoxy(x, y++);
-            printf("    ####      \n");
-            gotoxy(x, y++);
-            printf("  ########   \n");
-            gotoxy(x, y++);
-            printf(" ##########  \n");
-            gotoxy(x, y++);
-            printf("############ \n");
+        x = 60;
+        y = 8;
+        setColor(lightcyan, black);
+        gotoxy(x, y);
+        printf("            ######       \n");
+        gotoxy(x, y++);
+        printf("         ############    \n");
+        gotoxy(x, y++);
+        printf("        ##############   \n");
+        gotoxy(x, y++);
+        printf("## ##   ########### ##   \n");
+        gotoxy(x, y++);
+        printf(" #####################   \n");
+        gotoxy(x, y++);
+        printf("  ####################   \n");
 
-            x = 60;
-            y = 8;
-            setColor(lightcyan, black);
-            gotoxy(x, y);
-            printf("            ######       \n");
-            gotoxy(x, y++);
-            printf("         ############    \n");
-            gotoxy(x, y++);
-            printf("        ##############   \n");
-            gotoxy(x, y++);
-            printf("## ##   ########### ##   \n");
-            gotoxy(x, y++);
-            printf(" #####################   \n");
-            gotoxy(x, y++);
-            printf("  ####################   \n");
+        x = 90;
+        y = 8;
+        gotoxy(x, y++);
+        setColor(darkgray, black);
+        printf("    ####      \n");
+        gotoxy(x, y++);
+        printf("  ########    \n");
+        gotoxy(x, y++);
+        printf("  ########    \n");
+        gotoxy(x, y++);
+        printf("    ####      \n");
+        gotoxy(x, y++);
+        printf("  ########   \n");
+        gotoxy(x, y++);
+        printf(" ##########  \n");
+        gotoxy(x, y++);
+        printf("############ \n");
 
-            x = 90;
-            y = 8;
-            gotoxy(x, y++);
-            setColor(darkgray, black);
-            printf("    ####      \n");
-            gotoxy(x, y++);
-            printf("  ########    \n");
-            gotoxy(x, y++);
-            printf("  ########    \n");
-            gotoxy(x, y++);
-            printf("    ####      \n");
-            gotoxy(x, y++);
-            printf("  ########   \n");
-            gotoxy(x, y++);
-            printf(" ##########  \n");
-            gotoxy(x, y++);
-            printf("############ \n");
-
-            y = 20;
-            gotoxy(x, y);
 
             while (1) {
                 for (int i = 10; i <= 110; i++) {
                     x = i;
+                    y = 20;
                     gotoxy(x, y);
                     Sleep(ONE_SECOND);
+                    setColor(lightgray, black);
                     printf("▲");
+                    
 
                 }
 
@@ -160,33 +163,37 @@ void gloop() {
                 break;
 
             }
-            if (a == 1) {
-                if (x == 15) {
-                    system("cls");
-                    x = 40;
-                    gotoxy(x, y);
-                    setColor(red, black);
-                    printf("성공");
-                }
-                else {
-                    system("cls");
-                    printf("실패");
-                    life -= 1;
-                }
-            }
-
+            
+            
         }
+
+    if (a == 1) {
+        if (x == 15) {
+            x = 45;
+            y = 3;
+            gotoxy(x, y);
+            setColor(blue, black);
+            printf("성공");
+            life++;
+        }
+        else {
+            x = 45;
+            y = 3;
+            gotoxy(x, y);
+            setColor(red, black);
+            printf("실패");
+            Nos++;
+        }
+    }
         if (life == 3) {
             gameClear();
         }
-        if (life == 0) {
+        if (Nos == 3) {
             gameOver();
         }
-        break;
     }
+ 
 
-
-}
 void gameOver()
 {
     system("cls");
