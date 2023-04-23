@@ -1,5 +1,4 @@
 ﻿#include "main.h"
-#include "modules.h"
 
 int main(void) {
     while (1) {
@@ -64,6 +63,60 @@ void drawTitle() {
     printf("                              ---||-------||-------||----||------||----(______.)---");
 
 }
+
+int menuDraw() {
+    int input;
+    int x = 55, y = 26;
+    int key = y;
+    int num = 1;
+    gotoxy(x - 2, y);
+    printf("> 시작하기\n");
+    gotoxy(x, y + 1);
+    printf("종료하기");
+    while (1) {
+        input = _getch();
+        switch (input) {
+        case UP: {
+            if (y > key) {
+                gotoxy(x - 2, y);
+                printf(" ");
+                gotoxy(x - 2, --y);
+                printf(">");
+            }
+            break;
+        }
+        case DOWN: {
+            if (y < key + num) {
+                gotoxy(x - 2, y);
+                printf(" ");
+                gotoxy(x - 2, ++y);
+                printf(">");
+            }
+            break;
+        }
+        case ENTER: {
+            return y - key;
+        }
+        }
+    }
+    return 0;
+}
+int keyControl() {
+    int input;
+    while (1) {
+        input = _getch();
+        switch (input) {
+        case SPACEBAR: {
+            return 1;
+            break;
+        }
+        case ESC: {
+            break;
+        }
+        }
+    }
+    return 0;
+}
 void gloop() {
     int life = 3;
     int x = 0;
@@ -72,146 +125,110 @@ void gloop() {
     //값 넣어주기
     system("cls");
     // srand(time(NULL));
-    for (int i = 1; i <= 3; i++) {
+
+    while (1) {
+
+        x = 15;
+        y = 8;
+        setColor(lightcyan, black);
+        gotoxy(x, y);
+        printf("            ######       \n");
+        gotoxy(x, y++);
+        printf("         ############    \n");
+        gotoxy(x, y++);
+        printf("        ##############   \n");
+        gotoxy(x, y++);
+        printf("## ##   ########### ##   \n");
+        gotoxy(x, y++);
+        printf(" #####################   \n");
+        gotoxy(x, y++);
+        printf("  ####################   \n");
+
+        x = 40;
+        y = 8;
+        gotoxy(x, y++);
+        setColor(darkgray, black);
+        printf("    ####      \n");
+        gotoxy(x, y++);
+        printf("  ########    \n");
+        gotoxy(x, y++);
+        printf("  ########    \n");
+        gotoxy(x, y++);
+        printf("    ####      \n");
+        gotoxy(x, y++);
+        printf("  ########   \n");
+        gotoxy(x, y++);
+        printf(" ##########  \n");
+        gotoxy(x, y++);
+        printf("############ \n");
+
+        x = 60;
+        y = 8;
+        setColor(lightcyan, black);
+        gotoxy(x, y);
+        printf("            ######       \n");
+        gotoxy(x, y++);
+        printf("         ############    \n");
+        gotoxy(x, y++);
+        printf("        ##############   \n");
+        gotoxy(x, y++);
+        printf("## ##   ########### ##   \n");
+        gotoxy(x, y++);
+        printf(" #####################   \n");
+        gotoxy(x, y++);
+        printf("  ####################   \n");
+
+        x = 90;
+        y = 8;
+        gotoxy(x, y++);
+        setColor(darkgray, black);
+        printf("    ####      \n");
+        gotoxy(x, y++);
+        printf("  ########    \n");
+        gotoxy(x, y++);
+        printf("  ########    \n");
+        gotoxy(x, y++);
+        printf("    ####      \n");
+        gotoxy(x, y++);
+        printf("  ########   \n");
+        gotoxy(x, y++);
+        printf(" ##########  \n");
+        gotoxy(x, y++);
+        printf("############ \n");
+
+        y = 20;
+        gotoxy(x, y);
+
         while (1) {
-            
-            x = 15;
-            y = 8;
-            setColor(lightcyan, black);
-            gotoxy(x, y);
-            printf("            ######       \n");
-            gotoxy(x, y++);
-            printf("         ############    \n");
-            gotoxy(x, y++);
-            printf("        ##############   \n");
-            gotoxy(x, y++);
-            printf("## ##   ########### ##   \n");
-            gotoxy(x, y++);
-            printf(" #####################   \n");
-            gotoxy(x, y++);
-            printf("  ####################   \n");
-
-            x = 40;
-            y = 8;
-            gotoxy(x, y++);
-            setColor(darkgray, black);
-            printf("    ####      \n");
-            gotoxy(x, y++);
-            printf("  ########    \n");
-            gotoxy(x, y++);
-            printf("  ########    \n");
-            gotoxy(x, y++);
-            printf("    ####      \n");
-            gotoxy(x, y++);
-            printf("  ########   \n");
-            gotoxy(x, y++);
-            printf(" ##########  \n");
-            gotoxy(x, y++);
-            printf("############ \n");
-
-            x = 60;
-            y = 8;
-            setColor(lightcyan, black);
-            gotoxy(x, y);
-            printf("            ######       \n");
-            gotoxy(x, y++);
-            printf("         ############    \n");
-            gotoxy(x, y++);
-            printf("        ##############   \n");
-            gotoxy(x, y++);
-            printf("## ##   ########### ##   \n");
-            gotoxy(x, y++);
-            printf(" #####################   \n");
-            gotoxy(x, y++);
-            printf("  ####################   \n");
-
-            x = 90;
-            y = 8;
-            gotoxy(x, y++);
-            setColor(darkgray, black);
-            printf("    ####      \n");
-            gotoxy(x, y++);
-            printf("  ########    \n");
-            gotoxy(x, y++);
-            printf("  ########    \n");
-            gotoxy(x, y++);
-            printf("    ####      \n");
-            gotoxy(x, y++);
-            printf("  ########   \n");
-            gotoxy(x, y++);
-            printf(" ##########  \n");
-            gotoxy(x, y++);
-            printf("############ \n");
-
-            y = 20;
-            gotoxy(x, y);
-
-            while (1) {
-                for (int i = 10; i <= 110; i++) {
-                    x = i;
-                    gotoxy(x, y);
-                    Sleep(ONE_SECOND);
-                    printf("▲");
-
-                }
-
-                a = keyControl();
-                break;
-
+            for (int i = 10; i <= 110; i++) {
+                x = i;
+                gotoxy(x, y);
+                Sleep(ONE_SECOND);
+                printf("▲");
+                printf(" ");
+                
+                
             }
+            a = keyControl();
             if (a == 1) {
                 if (x == 15) {
                     system("cls");
-                    x = 40;
-                    gotoxy(x, y);
-                    setColor(red, black);
                     printf("성공");
                 }
                 else {
                     system("cls");
                     printf("실패");
-                    life -= 1;
                 }
             }
+            /*if (x == 110) {
+                for (int i = 110; i <= 10; i--) {
+                    x = i;
+                    gotoxy(x, y);
+                    Sleep(ONE_SECOND);
+                    printf("▲");
+                }
+            }*/
+        }
 
-        }
-        if (life == 3) {
-            gameClear();
-        }
-        if (life == 0) {
-            gameOver();
-        }
-        break;
     }
-    
-    
-}
-void gameOver()
-{
-    system("cls");
-    int x = 35, y = 4;
-
-    setColor(lightred);
-    gotoxy(x, y++); printf("   _____          __  __ ______    ______      ________ _____ ");
-    gotoxy(x, y++); printf("  / ____|   /\\   |  \\/  |  ____|  / __ \\ \\    / /  ____|  __ \\");
-    gotoxy(x, y++); printf(" | |  __   /  \\  | \\  / | |__    | |  | \\ \\  / /| |__  | |__) |");
-    gotoxy(x, y++); printf(" | | |_ | / /\\ \\ | |\\/| |  __|   | |  | |\\ \\/ / |  __| |  _  /");
-    gotoxy(x, y++); printf(" | |__| |/ ____ \\| |  | | |____  | |__| | \\  /  | |____| | \\ \\");
-    gotoxy(x, y++); printf("  \\_____/_/    \\_\\_|  |_|______|  \\____/   \\/   |______|_|  \\_\\");
-
-
-}
-void gameClear()
-{
-    int input;
-    system("cls");
-    int x = 35, y = 4;
-
-    setColor(lightgreen);
-    gotoxy(x, y++); printf("   _____                         _____ _    ");
-    gotoxy(x, y++); printf("  / ____|                       / ____| | ");
-    gotoxy(x, y++); printf(" | |  __  __ _ _ __ ___   ___  | |    | | ___  __ _ _ __");
-    gotoxy(x, y++); printf(" | | |_ |/ _` | '_ ` _ \\ / _ \\ | |    | |/ _ \\/ _` | '__|");
-    gotoxy(x, y++); printf(" | |__| | (_| | | | | | |  __/ | |____| |  __/ (_| | |   ");
-    gotoxy(x, y++); printf("  \\_____|\\__,_|_| |_| |_|\\___|  \\_____|_|\\___|\\__,_|_|");
 }
