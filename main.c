@@ -72,10 +72,12 @@ void gloop() {
     int a=0;
     int Nos = 0;
     int count = 3;
+    
     //값 넣어주기
     // srand(time(NULL));
     //for (int i = 1; i <= 3; i++) {
     while (1) {
+        system("cls");
             while (1) {
                 x = 15;
                 y = 8;
@@ -151,7 +153,6 @@ void gloop() {
                     Sleep(ONE_SECOND);
                     setColor(lightgray, black);
                     printf("▲");
-                    system("cls");
 
                 }
                 
@@ -207,7 +208,6 @@ void gameOver()
 }
 void gameClear()
 {
-    int input;
     system("cls");
     int x = 35, y = 4;
 
