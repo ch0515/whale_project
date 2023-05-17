@@ -1,182 +1,153 @@
-//modules.c
-#include "modules.h"
+ï»¿#include "modules.h"
 
-#define ESC 27
-#define ENTER 13
+// _getch() value of arrow key (chohadam 21-03-11)
 #define UP 72
 #define DOWN 80
 #define LEFT 75
 #define RIGHT 77
-#define SPACEBAR 32
-
-
-
-void init() {
-    system("mode con cols=120 lines=30 | title Whale game");
-
-    HANDLE consoleHandle = GetStdHandle(STD_OUTPUT_HANDLE); //ÄÜ¼Ö ÇÚµé °¡Á®¿À±â
-    CONSOLE_CURSOR_INFO ConsoleCursor;
-    ConsoleCursor.bVisible = 0;
-    ConsoleCursor.dwSize = 1;
-    SetConsoleCursorInfo(consoleHandle, &ConsoleCursor);
-}
-//Ä¿¼­ ¼û±â±â
-void CursorView()
-{
-    CONSOLE_CURSOR_INFO cursorInfo = { 0, };
-    cursorInfo.dwSize = 1;
-    cursorInfo.bVisible = FALSE;
-    SetConsoleCursorInfo(GetStdHandle(STD_OUTPUT_HANDLE), &cursorInfo);
-}
-
 
 // move the cursor funtion (chohadam 21-03-11)
 void gotoxy(int x, int y) {
-    COORD pos = { x, y };
-    SetConsoleCursorPosition(GetStdHandle(STD_OUTPUT_HANDLE), pos);
+	COORD pos = { x, y };
+	SetConsoleCursorPosition(GetStdHandle(STD_OUTPUT_HANDLE), pos);
 }
-// ÅØ½ºÆ® »ö»ó
+
+// find out the pressed key function (chohadam 21-03-11)
+int get_key(void) {
+	// if keyboard pressed
+	if (_kbhit()) {
+		// return pressed value
+		return _getch();
+	}
+	return 1;
+}
+
+// move to the arrow key function (chohadam 21-03-11)
+void move_arrow_key(
+	char key,
+	int* x,
+	int* y,
+	int size,
+	int y_min,
+	int y_max,
+	int x_min,
+	int x_max
+) {
+	const int Y_MIN = y_min;
+	const int Y_MAX = y_max;
+	const int X_MIN = x_min;
+	const int X_MAX = x_max;
+
+	switch (key) {
+		// pressed ï¿½ï¿½
+	case UP:
+		*y -= size;
+		if (*y < Y_MIN) *y = Y_MAX;
+		break;
+		// pressed ï¿½ï¿½
+	case DOWN:
+		*y += size;
+		if (*y > Y_MAX) *y = Y_MIN;
+		break;
+		// pressed ï¿½ï¿½
+	case LEFT:
+		*x -= size;
+		if (*x < X_MIN) *x = X_MAX;
+		break;
+		// pressed ï¿½ï¿½
+	case RIGHT:
+		*x += size;
+		if (*x > X_MAX) *x = X_MIN;
+		break;
+	}
+}
+
+void print_auto_y(int* x, int* y, char* str) {
+	gotoxy(*x, *y);
+	printf(str);
+	*y += 1;
+}
+
 void setColor(int color) {
-    SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE), color);
+	SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE), color);
+}
+
+void print_by_name(char* name) {
+	// set color : GREY
+	setColor(darkgray);
+
+	if (strlen(name) > 8) {
+		// 3ï¿½ï¿½ ï¿½Ì»ï¿½ï¿½Ì¸ï¿½
+		gotoxy(88, 28);
+	}
+	else {
+		gotoxy(105, 28);
+	}
+	printf("by %s", name);
+
+	setColor(white);
+}
+
+void print_by_text(char* text, char* color, int x, int y) {
+	// set color : RED
+	setColor(color);
+
+	gotoxy(x, y);
+	printf("TEAM [ %s ] KILL", text);
+
+	setColor(white);
+}
+void print_main_text(char* text, char* color, int x, int y) {
+	setColor(color);
+	gotoxy(x, y);
+	printf("%s", text);
+
+	setColor(white);
+
 }
 
 
-void setBackColor(int forground, int background) {
-    HANDLE consoleHandle = GetStdHandle(STD_OUTPUT_HANDLE);	//ÄÜ¼Ö ÇÚµé °¡Á®¿À±â
-    int code = forground + background * 16;
-    SetConsoleTextAttribute(consoleHandle, code);
+void rectangle(int width, int height, int x, int y) {
+	// ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+	for (int i = 1; i < width / 2; i++) {
+		gotoxy((x + width) / 2 - i, y);
+		printf("â”€");
+
+		gotoxy((x + width) / 2 + i, y);
+		printf("â”€");
+		Sleep(1);
+	}
+	gotoxy(x, y);
+	printf("â”Œ");
+	gotoxy(x + width, y);
+	printf("â”");
+
+	// ï¿½ï¿½      ï¿½ï¿½
+	for (int i = 1; i < height; i++) {
+		gotoxy(x, y + i);
+		// ï¿½ï¿½      ï¿½ï¿½
+		printf("â”‚");
+
+		for (int j = 1; j < width - 1; j++) {
+			printf(" ");
+		}
+		printf(" ");
+
+		printf("â”‚");
+		Sleep(1);
+	}
+
+	// ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+	gotoxy(x, y + height);
+	printf("â””");
+	gotoxy(x + width, y + height);
+	printf("â”˜");
+	for (int i = 1; i < width / 2; i++) {
+		gotoxy(x + i, y + height);
+		printf("â”€");
+
+		gotoxy((x + width) - i, y + height);
+		printf("â”€");
+		Sleep(1);
+	}
 }
-
-int keyControl() {
-    int input;
-    while (1) {
-        input = _getch();
-        switch (input) {
-        case SPACEBAR: {
-            return 1;
-            break;
-        }
-        case ESC: {
-            break;
-        }
-        }
-    }
-    return 0;
-}
-int menuDraw() {
-    int input;
-    int x = 55, y = 26;
-    int key = y;
-    int num = 1;
-    gotoxy(x - 2, y);
-    printf("> ½ÃÀÛÇÏ±â\n");
-    gotoxy(x, y + 1);
-    printf("Á¾·áÇÏ±â");
-    while (1) {
-        input = _getch();
-        switch (input) {
-        case UP: {
-            if (y > key) {
-                gotoxy(x - 2, y);
-                printf(" ");
-                gotoxy(x - 2, --y);
-                printf(">");
-            }
-            break;
-        }
-        case DOWN: {
-            if (y < key + num) {
-                gotoxy(x - 2, y);
-                printf(" ");
-                gotoxy(x - 2, ++y);
-                printf(">");
-            }
-            break;
-        }
-        case ENTER: {
-            return y - key;
-        }
-        }
-    }
-    return 0;
-}
-/*#include <stdio.h>
-#include <windows.h>
-#include <stdlib.h>
-#include <time.h>
-
-#ifndef KEY_CODE
-#define KEY_CODE
-#define ONE_SECOND 10
-
-
-
-void init();
-void gotoxy(int, int);
-void setColor(int, int);
-
-
-void drawTitle();
-int menuDraw();
-int keyControl();
-void gloop();
-
-//Å°º¸µå °ª
-#define ESC 27
-#define ENTER 13
-#define UP 72
-#define DOWN 80
-#define LEFT 75
-#define RIGHT 77
-#define SPACEBAR 32
-
-#endif
-
-#ifndef __COLOR_LIST_
-#define __COLOR_LIST_
-
-enum {
-    black,
-    blue,
-    green,
-    cyan,
-    red,
-    purple,
-    brown,
-    lightgray,
-    darkgray,
-    lightblue,
-    lightgreen,
-    lightcyan,
-    lightred,
-    lightpurple,
-    yellow,
-    white
-};
-
-#endif
-
-void init() {
-    system("mode con cols=120 lines=30 | title Whale game");
-
-    HANDLE consoleHandle = GetStdHandle(STD_OUTPUT_HANDLE); //ÄÜ¼Ö ÇÚµé °¡Á®¿À±â
-    CONSOLE_CURSOR_INFO ConsoleCursor;
-    ConsoleCursor.bVisible = 0;
-    ConsoleCursor.dwSize = 1;
-    SetConsoleCursorInfo(consoleHandle, &ConsoleCursor);
-}
-
-void gotoxy(int x, int y) {
-    HANDLE consoleHandle = GetStdHandle(STD_OUTPUT_HANDLE);   //ÄÜ¼Ö ÇÚµé °¡Á®¿À±â
-    COORD pos;
-    pos.X = x;
-    pos.Y = y;
-    SetConsoleCursorPosition(consoleHandle, pos);
-}
-
-
-void setColor(int forground, int background) {
-    HANDLE consoleHandle = GetStdHandle(STD_OUTPUT_HANDLE); //ÄÜ¼Ö ÇÚµé °¡Á®¿À±â
-    int code = forground + background * 16;
-    SetConsoleTextAttribute(consoleHandle, code);
-}*/

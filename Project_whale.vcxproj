@@ -141,10 +141,12 @@
   <ItemGroup>
     <ClCompile Include="main.c" />
     <ClCompile Include="modules.c" />
+    <ClCompile Include="Whale.c" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="main.h" />
     <ClInclude Include="modules.h" />
+    <ClInclude Include="Whale.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

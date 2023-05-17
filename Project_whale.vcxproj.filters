@@ -21,12 +21,18 @@
     <ClInclude Include="modules.h">
       <Filter>헤더 파일</Filter>
     </ClInclude>
+    <ClInclude Include="Whale.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.c">
       <Filter>소스 파일</Filter>
     </ClCompile>
     <ClCompile Include="modules.c">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="Whale.c">
       <Filter>소스 파일</Filter>
     </ClCompile>
   </ItemGroup>
