@@ -61,7 +61,7 @@ void pushpull() {
 // 게임 메인화면 함수
 void main_show() {
 	system("cls");
-
+	int x, y = 0;
 	x = 23;
 	y = 4;
 	gotoxy(x, y);

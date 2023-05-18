@@ -11,7 +11,7 @@ void set_cursor(int flag, int size) {
 }
 void set_console(void) {
 	// set the console size
-	system("mode con:cols=120 lines=31");
+	system("mode con:cols=120 lines=30");
 	// hide cursor
 	// set title
 	system("title CPU KINGDOM");
