@@ -91,14 +91,14 @@ void main_show() {
 	gotoxy(x, ++y);
 	print_main_text("|                                                      |", lightgray, &x, &y);
 	gotoxy(x, ++y);
-	print_main_text("O  ---(.______)--||-------||----||------||-------||-----", lightgray, &x, &y);
+	print_main_text("O  -----||-------||----||------||-----||----(______.)---", lightgray, &x, &y);
 	gotoxy(x, ++y);
 
 
 
 
 	x = 0;
-	y = 12;
+	y = 11;
 	gotoxy(x, y);
 	print_main_text("             $$$$$$", lightcyan, &x, &y);
 	gotoxy(x, ++y);
@@ -113,7 +113,28 @@ void main_show() {
 	print_main_text("   $$$$$$$$$$$$$$$$$$$", lightcyan, &x, &y);
 	gotoxy(x, ++y);
 
-
+	x = 10;
+	y = 19;
+	gotoxy(x, y);
+	print_main_text("    #   ", lightgreen, &x, &y);
+	gotoxy(x, ++y);
+	print_main_text("   ##   ", lightgreen, &x, &y);
+	gotoxy(x, ++y);
+	print_main_text("  ####   ", lightgreen, &x, &y);
+	gotoxy(x, ++y);
+	print_main_text(" #####         *", lightgreen, &x, &y);
+	gotoxy(x, ++y);
+	print_main_text("######         **", lightgreen, &x, &y);
+	gotoxy(x, ++y);
+	print_main_text("######        ***", lightgreen, &x, &y);
+	gotoxy(x, ++y);
+	print_main_text(" ######        ****", lightgreen, &x, &y);
+	gotoxy(x, ++y);
+	print_main_text(" #######        ***", lightgreen, &x, &y);
+	gotoxy(x, ++y);
+	print_main_text(" #######        **** ", lightgreen, &x, &y);
+	gotoxy(x, ++y);
+	print_main_text("########      ****** ", lightgreen, &x, &y);
 
 	x = 3;
 	y = 19;
@@ -125,7 +146,15 @@ void main_show() {
 	gotoxy(x, y);
 	print_main_text("*", lightblue, &x, &y);
 
+	x = 87;
+	y = 17;
+	gotoxy(x, y);
+	print_main_text("*", lightblue, &x, &y);
 
+	x = 100;
+	y = 4;
+	gotoxy(x, y);
+	print_main_text("O", lightblue, &x, &y);
 
 	x = 90;
 	y = 10;
@@ -207,6 +236,7 @@ enum MENU game() {
 // 줄다리기 그려주는 함수
 void line(int x, int y)
 {
+	
 	system("cls");
 	int i, line[21] = { 0 };
 	line[10] = 1;
@@ -248,7 +278,7 @@ void line(int x, int y)
 	gotoxy(40, 24);
 	printf("● ＼__ /_          /●/__-_       ＼●_   _/  (");
 	gotoxy(28, 25);
-	printf("▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲");
+	printf("▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲");
 
 	// x,y함수로 line그려줌 x =40, y = 11
 	gotoxy(x, 11);
@@ -284,6 +314,53 @@ void line(int x, int y)
 
 void start_game() {
 	system("cls");
+	int x, y = 0;
+	x = 8;
+	y = 19;
+	gotoxy(x, y);
+	print_main_text("    #   ", lightgreen, &x, &y);
+	gotoxy(x, ++y);
+	print_main_text("   ##   ", lightgreen, &x, &y);
+	gotoxy(x, ++y);
+	print_main_text("  ####   ", lightgreen, &x, &y);
+	gotoxy(x, ++y);
+	print_main_text(" #####         *", lightgreen, &x, &y);
+	gotoxy(x, ++y);
+	print_main_text("######         **", lightgreen, &x, &y);
+	gotoxy(x, ++y);
+	print_main_text("######        ***", lightgreen, &x, &y);
+	gotoxy(x, ++y);
+	print_main_text(" ######        ****", lightgreen, &x, &y);
+	gotoxy(x, ++y);
+	print_main_text(" #######        ***", lightgreen, &x, &y);
+	gotoxy(x, ++y);
+	print_main_text(" #######        **** ", lightgreen, &x, &y);
+	gotoxy(x, ++y);
+	print_main_text("########      ****** ", lightgreen, &x, &y);
+
+	x = 90;
+	y = 19;
+	gotoxy(x, y);
+	print_main_text("    #   ", lightgreen, &x, &y);
+	gotoxy(x, ++y);
+	print_main_text("   ##   ", lightgreen, &x, &y);
+	gotoxy(x, ++y);
+	print_main_text("  ####   ", lightgreen, &x, &y);
+	gotoxy(x, ++y);
+	print_main_text(" #####         *", lightgreen, &x, &y);
+	gotoxy(x, ++y);
+	print_main_text("######         **", lightgreen, &x, &y);
+	gotoxy(x, ++y);
+	print_main_text("######        ***", lightgreen, &x, &y);
+	gotoxy(x, ++y);
+	print_main_text(" ######        ****", lightgreen, &x, &y);
+	gotoxy(x, ++y);
+	print_main_text(" #######        ***", lightgreen, &x, &y);
+	gotoxy(x, ++y);
+	print_main_text(" #######        **** ", lightgreen, &x, &y);
+	gotoxy(x, ++y);
+	print_main_text("########      ****** ", lightgreen, &x, &y);
+
 	gotoxy(62, 12);
 	printf("VS");
 	gotoxy(45, 9);
@@ -294,6 +371,8 @@ void start_game() {
 	gotoxy(68, 12);
 	printf("두번째 팀 이름입력 후 엔터> ");
 	scanf_s("%s", &t_name2, 20);
+
+	
 	// 이름 입력 후 화면 지우기
 	system("cls");
 	//line 그려줌
