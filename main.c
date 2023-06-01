@@ -14,7 +14,7 @@ void set_console(void) {
 	system("mode con:cols=120 lines=30");
 	// hide cursor
 	// set title
-	system("title CPU KINGDOM");
+	system("title 이상한 개발자 CPU");
 	// clear console
 	system("cls");
 }

@@ -157,18 +157,20 @@ void main_show() {
 	print_main_text("O", lightblue, &x, &y);
 
 	x = 90;
-	y = 10;
-	print_auto_y(&x, &y, "             £¯¡Ò¡¬");
-	print_auto_y(&x, &y, "           £¯¡¡   ¡¬");
-	print_auto_y(&x, &y, "	    /¡¡¡¡¡¡  ¡¬");
-	print_auto_y(&x, &y, "	   /¡¡¡¡¡¡¡¡   ¡¬");
-	print_auto_y(&x, &y, "	   ( / ¡¡ ¡¡    )");
-	print_auto_y(&x, &y, "	   f  ¡¡       £ü");
-	print_auto_y(&x, &y, "	   | ¡Ü¡¡¡¡¡Ü¡¡£ü");
-	print_auto_y(&x, &y, "	   |¡¡ ¡ä¡¡¡¡¡¡£ü");
-	print_auto_y(&x, &y, "         |£ß£ß ¡¡ ¡¡«Î");
-	print_auto_y(&x, &y, "	   ïËïËïËïËïË£þl¡¬");
-	print_auto_y(&x, &y, "	   ª¯(_(_(£ßL£ß)«Î");
+	y = 16;
+	gotoxy(x, y);
+	print_main_text("            O  O        ", white, &x, &y);
+	gotoxy(x, ++y);
+	print_main_text("   VV     #########     VV", lightred, &x, &y);
+	gotoxy(x, ++y);
+	print_main_text("    #   ####     ####   #   ", lightred, &x, &y);
+	gotoxy(x, ++y);
+	print_main_text("      # ###  VVV  ### #     ", lightred, &x, &y);
+	gotoxy(x, ++y);
+	print_main_text("         ###     ###      ", lightred, &x, &y);
+	gotoxy(x, ++y);
+	print_main_text("          ########      ", lightred, &x, &y);
+
 
 
 
