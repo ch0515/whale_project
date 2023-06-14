@@ -238,7 +238,7 @@ enum MENU game() {
 // 줄다리기 그려주는 함수
 void line(int x, int y)
 {
-	
+
 	system("cls");
 	int i, line[21] = { 0 };
 	line[10] = 1;
@@ -374,7 +374,7 @@ void start_game() {
 	printf("두번째 팀 이름입력 후 엔터> ");
 	scanf_s("%s", &t_name2, 20);
 
-	
+
 	// 이름 입력 후 화면 지우기
 	system("cls");
 	//line 그려줌
